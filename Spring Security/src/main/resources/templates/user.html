@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:dt="http://www.thymeleaf.org/dandelion/datatables">
+<head>
+    <title>Data member</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"></link>
+    <link th:href="@{/css/main.css}" rel="stylesheet"></link>
+    <link th:href="@{/css/simple-sidebar.css}" rel="stylesheet"></link>
+    <link th:href="@{/css/util.css}" rel="stylesheet"></link>
+    <link th:href="@{/css/login.css}" rel="stylesheet"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+    <div th:replace="sidebar :: sidebar-fragment">&nbsp;</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <h3>Halo, ini halaman User! </h3>
+
+            <p>Selamat datang, <span class="myUsername"></span>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>
