@@ -38,6 +38,8 @@ public class TransactionServiceImpl implements TransactionService {
             if (transaction.getStatus().equals("ACCEPTED")) {
                 memberData.setBalance(memberData.getBalance() - bookingData.getPrice());
                 driverData.setBalance(driverData.getBalance() + bookingData.getPrice());
+                memberRepository.save(memberData);
+                driverRepository.save(driverData);
             }
             else if (transaction.getStatus().equals("REJECTED")) {
                 return false;
